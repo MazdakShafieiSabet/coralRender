@@ -33,7 +33,23 @@ First, make sure you've selected your preferred renderer (in my case this would 
 Then make sure all your animation starts at frame 1 or a common start frame if you're doing a batch render. Otherwise this isn't important. Is this kind of annoying? Yes. Will I be working on this? Yes.
 Also make sure all files output to the same directory under the output settings in Blender if you plan on removing those outputs and only keeping the ones from your Compositor nodes.
 
-## Step 2: coralRender
+## Step 2: Linux specific
+As far as I know, Linux does not come with Tkinter installed in Python, so just make sure to install it before running the code.
+
+Debian/Ubuntu-based
+```
+sudo apt install python3-tk
+```
+Arch-based
+```
+sudo pacman -S tk
+```
+Fedora-based
+```
+sudo dnf install python3-tkinter
+```
+
+## Step 3: coralRender
 Enter the path to your file (or just the directory all your files are in) and enter the start frame (or leave at 1) and hit render. To remove the double outputs enter where the default Blender output is. Then hit "Start Render" and watch it go.
 
 # Future Roadmap
