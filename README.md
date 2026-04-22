@@ -1,5 +1,5 @@
 # coralRender
-A Python tool for batch rendering Blender Files.
+A Python tool for batch rendering Blender Files. Name to be changed in the future.
 
 # Features
 - **Render out files after one another:** got multiple files you need to render overnight? Just hit render, and watch it go. Or well, don't. Head to bed.
