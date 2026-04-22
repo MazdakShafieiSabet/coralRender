@@ -61,9 +61,14 @@ def run_render():
         
         ## actual rendering, used to show output in the text box in the GUI
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        line_count = 0
         for line in process.stdout:
             output_box.insert(tk.END, line)
             output_box.see(tk.END)
+            line_count += 1
+            if line_count >= 256:  ## limit the number of lines displayed
+                output_box.delete(1.0, tk.END)
+                line_count = 0
     
     ## removing double exports, only needed when working with file output nodes in the compositer
     if default_output_entry.get() != "" and file_output_var.get():
@@ -122,4 +127,5 @@ output_box.grid(row=6, column=0, columnspan=3, padx=5, pady=5)
 
 start_render_button.grid(row=7, column=0, columnspan=3, pady=10)
 
+## main loop
 root.mainloop()
