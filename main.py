@@ -114,9 +114,9 @@ blend_file_entry.grid(row=1, column=1, sticky="w", padx=5, pady=5)
 frame_start_entry.grid(row=2, column=1, sticky="w", padx=5, pady=5)
 default_output_entry.grid(row=3, column=1, sticky="w", padx=5, pady=5)
 
-batch_render_checkbox.grid(row=2, column=2, sticky="w", padx=5, pady=5)
-animation_checkbox.grid(row=3, column=2, sticky="w", padx=5, pady=5)
-file_output_only_checkbox.grid(row=4, column=2, sticky="w", padx=5, pady=5)
+batch_render_checkbox.grid(row=1, column=2, sticky="w", padx=5, pady=5)
+animation_checkbox.grid(row=2, column=2, sticky="w", padx=5, pady=5)
+file_output_only_checkbox.grid(row=3, column=2, sticky="w", padx=5, pady=5)
 
 output_box.grid(row=6, column=0, columnspan=3, padx=5, pady=5)
 
